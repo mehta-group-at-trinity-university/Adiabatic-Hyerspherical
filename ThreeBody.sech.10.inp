@@ -1,0 +1,31 @@
+NumStates   NumBound   NumStateInc   NumPrintStates  RadialCouplingFlag
+   12           5          7              0                 1 
+
+ Bosons(=0)/Fermions(=1)    J  Parity (-1 or +1)
+          0                 0       +1      
+
+Left  Right
+ 1      1
+
+Legendre File
+Legendre.dat
+
+Legendre Points
+     10
+
+ Shift     Shift2   Order
+ -1.d-6    -1.d-6    5
+
+m1               m2               m3 (m2=m3)
+7.28497736805d4  15.8425446926d4  15.8425446926d4 
+
+     DcoefAB                 DcoefAA              RscaleAB  RscaleAA
+-1.243032960231949E-008  -1.838395930149919E-009   144.d0    165.d0
+
+xNumPoints   yNumPoints    r0xfactor  r0yfactor
+   180          100         12.d0       12.d0  
+
+RSteps  RDerivDelt  RFirst    RLast       Rchange
+ 400      0.05d0    0.01d0    10000.d0    600.0d0
+
+
