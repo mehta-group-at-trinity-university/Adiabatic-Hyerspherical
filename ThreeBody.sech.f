@@ -1727,9 +1727,9 @@ c     Smooth Grid (jpdincao 10-06-03)
          enddo
       enddo
 
-      do k=1,xNumPoints
-         write(777,*)k,xPoints(k)
-      enddo
+!      do k=1,xNumPoints
+!         write(777,*)k,xPoints(k)
+!      enddo
 
       r0y = r0yfactor*(RscaleAA+RscaleAB)/2.d0
 
