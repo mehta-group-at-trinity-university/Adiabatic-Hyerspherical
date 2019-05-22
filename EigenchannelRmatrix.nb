@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    257798,       7512]
-NotebookOptionsPosition[    249381,       7314]
-NotebookOutlinePosition[    249860,       7334]
-CellTagsIndexPosition[    249817,       7331]
+NotebookDataLength[    316121,       9249]
+NotebookOptionsPosition[    305749,       9001]
+NotebookOutlinePosition[    306228,       9021]
+CellTagsIndexPosition[    306185,       9018]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -871,23 +871,34 @@ Cell[BoxData[
    RowBox[{"b", "(", "E", ")"}], "=", 
    RowBox[{
     RowBox[{
-     FractionBox[
-      RowBox[{"-", "\[PartialD]"}], 
-      RowBox[{"\[PartialD]", "R"}]], 
-     RowBox[{"ln", "[", 
-      RowBox[{
-       SuperscriptBox["R", "\[Alpha]"], 
-       RowBox[{"\[CapitalPsi]", "(", 
-        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}], "]"}]}], "=", 
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        OverscriptBox["R", "^"], "\[CenterDot]", 
+        OverscriptBox["n", "^"]}], ")"}]}], 
+     RowBox[{
+      FractionBox["\[PartialD]", 
+       RowBox[{"\[PartialD]", "R"}]], 
+      RowBox[{"ln", "[", 
+       RowBox[{
+        SuperscriptBox["R", "\[Alpha]"], 
+        RowBox[{"\[CapitalPsi]", "(", 
+         RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}], "]"}]}]}], "=", 
     RowBox[{
-     FractionBox[
-      RowBox[{"-", "\[PartialD]"}], 
-      RowBox[{"\[PartialD]", "R"}]], 
-     RowBox[{"ln", "[", 
-      RowBox[{"\[Psi]", "(", 
-       RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], "]"}]}]}]}], 
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        OverscriptBox["R", "^"], "\[CenterDot]", 
+        OverscriptBox["n", "^"]}], ")"}]}], 
+     RowBox[{
+      FractionBox["\[PartialD]", 
+       RowBox[{"\[PartialD]", "R"}]], 
+      RowBox[{"ln", "[", 
+       RowBox[{"\[Psi]", "(", 
+        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], "]"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.763477328630238*^9, 3.763477404633396*^9}}],
+ CellChangeTimes->{{3.763477328630238*^9, 3.763477404633396*^9}, {
+  3.7643338062243643`*^9, 3.764333839615814*^9}}],
 
 Cell["\<\
 Let\[CloseCurlyQuote]s focus for now on the surface term in the Rayleigh-Ritz \
@@ -1025,12 +1036,24 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"[", 
       RowBox[{
-       RowBox[{"\[Delta]", "(", 
-        RowBox[{"R", "-", 
-         SubscriptBox["R", "2"]}], ")"}], "-", 
-       RowBox[{"\[Delta]", "(", 
-        RowBox[{"R", "-", 
-         SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          OverscriptBox["R", "^"], "\[CenterDot]", 
+          SubscriptBox[
+           OverscriptBox["n", "^"], "2"]}], ")"}], 
+        RowBox[{"\[Delta]", "(", 
+         RowBox[{"R", "-", 
+          SubscriptBox["R", "2"]}], ")"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          OverscriptBox["R", "^"], "\[CenterDot]", 
+          SubscriptBox[
+           OverscriptBox["n", "^"], "1"]}], ")"}], 
+        RowBox[{"\[Delta]", "(", 
+         RowBox[{"R", "-", 
+          SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
      RowBox[{"(", 
       RowBox[{
        SuperscriptBox["\[CapitalPsi]", "*"], "\[CapitalPsi]"}], ")"}], 
@@ -1054,7 +1077,7 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{
   3.763477801225151*^9, {3.763478000856538*^9, 3.763478028026607*^9}, 
-   3.763484127986959*^9}],
+   3.763484127986959*^9, {3.764333888463791*^9, 3.764333934232552*^9}}],
 
 Cell[TextData[{
  "We call ",
@@ -1062,6 +1085,11 @@ Cell[TextData[{
   FormBox[
    RowBox[{
     RowBox[{
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        OverscriptBox["R", "^"], "\[CenterDot]", 
+        OverscriptBox["n", "^"]}], ")"}]}], 
      FractionBox["1", 
       RowBox[{
        SuperscriptBox["R", "\[Alpha]"], "\[CapitalPsi]"}]], 
@@ -1070,8 +1098,7 @@ Cell[TextData[{
        RowBox[{"(", 
         RowBox[{
          SuperscriptBox["R", "\[Alpha]"], "\[CapitalPsi]"}], ")"}]}], 
-      RowBox[{"\[PartialD]", "R"}]]}], "=", 
-    RowBox[{"-", "b"}]}], TraditionalForm]],
+      RowBox[{"\[PartialD]", "R"}]]}], "=", "b"}], TraditionalForm]],
   FormatType->"TraditionalForm"],
  ", and treat it as constant over ",
  Cell[BoxData[
@@ -1079,7 +1106,9 @@ Cell[TextData[{
    RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}], TraditionalForm]],
   FormatType->"TraditionalForm"]
 }], "Text",
- CellChangeTimes->{{3.763478063283177*^9, 3.763478088154202*^9}}],
+ CellChangeTimes->{{3.763478063283177*^9, 3.763478088154202*^9}, {
+  3.7643307026823177`*^9, 3.7643308085435143`*^9}, {3.764333978216423*^9, 
+  3.764334021090364*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -1102,7 +1131,7 @@ Cell[BoxData[
       RowBox[{
        RowBox[{"\[Delta]", "(", 
         RowBox[{"R", "-", 
-         SubscriptBox["R", "2"]}], ")"}], "-", 
+         SubscriptBox["R", "2"]}], ")"}], "+", 
        RowBox[{"\[Delta]", "(", 
         RowBox[{"R", "-", 
          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -1112,14 +1141,20 @@ Cell[BoxData[
      RowBox[{"(", 
       RowBox[{
        RowBox[{"-", "b"}], "-", 
-       FractionBox["\[Alpha]", "R"]}], ")"}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          OverscriptBox["R", "^"], "\[CenterDot]", 
+          OverscriptBox["n", "^"]}], ")"}], 
+        FractionBox["\[Alpha]", "R"]}]}], ")"}], " ", 
      SuperscriptBox["R", 
       RowBox[{"d", "-", "1"}]], 
      RowBox[{"\[DifferentialD]", "R"}], 
      RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{3.763478056657743*^9, 3.7634780961755047`*^9, 
-  3.763484118389113*^9}],
+ CellChangeTimes->{
+  3.763478056657743*^9, 3.7634780961755047`*^9, 3.763484118389113*^9, {
+   3.76433376574636*^9, 3.764333768041669*^9}, 3.764334056204585*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1142,13 +1177,12 @@ Cell[BoxData[
       SubscriptBox["\[Integral]", "V"], 
       RowBox[{
        RowBox[{"[", 
-        RowBox[{
-         RowBox[{"\[Delta]", "(", 
-          RowBox[{"R", "-", 
-           SubscriptBox["R", "2"]}], ")"}], "-", 
-         RowBox[{"\[Delta]", "(", 
-          RowBox[{"R", "-", 
-           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+        RowBox[{"\[Delta]", "(", 
+         RowBox[{"R", "-", 
+          SubscriptBox["R", "2"], "+", 
+          RowBox[{"\[Delta]", "(", 
+           RowBox[{"R", "-", 
+            SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
        RowBox[{
         SuperscriptBox["\[CapitalPsi]", "*"], "(", 
         RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], 
@@ -1163,12 +1197,24 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"[", 
        RowBox[{
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           OverscriptBox["R", "^"], "\[CenterDot]", 
+           SubscriptBox[
+            OverscriptBox["n", "^"], "2"]}], ")"}], 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "2"]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           OverscriptBox["R", "^"], "\[CenterDot]", 
+           SubscriptBox[
+            OverscriptBox["n", "^"], "1"]}], ")"}], 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
       RowBox[{"(", 
        RowBox[{
         SuperscriptBox["\[CapitalPsi]", "*"], "\[CapitalPsi]"}], ")"}], 
@@ -1180,7 +1226,8 @@ Cell[BoxData[
       RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763478109787901*^9, 3.763478161690816*^9}, {
-  3.763484114941279*^9, 3.7634841168290157`*^9}}],
+  3.763484114941279*^9, 3.7634841168290157`*^9}, {3.764334070893116*^9, 
+  3.764334090933292*^9}}],
 
 Cell["\<\
 Plugging this all back into the Rayleigh-Ritz expression, which we write:\
@@ -1281,18 +1328,104 @@ Cell["One has:", "Text",
 Cell[BoxData[
  FormBox[
   RowBox[{
+   RowBox[{
+    RowBox[{"-", "b"}], 
+    RowBox[{
+     SubscriptBox["\[Integral]", "V"], 
+     RowBox[{
+      RowBox[{"[", 
+       RowBox[{"\[Delta]", "(", 
+        RowBox[{"R", "-", 
+         SubscriptBox["R", "2"], "+", 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
+      RowBox[{
+       SuperscriptBox["\[CapitalPsi]", "*"], "(", 
+       RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], 
+      RowBox[{"\[CapitalPsi]", "(", 
+       RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], 
+      SuperscriptBox["R", 
+       RowBox[{"d", "-", "1"}]], 
+      RowBox[{"\[DifferentialD]", "R"}], 
+      RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}], "=", 
+   RowBox[{
+    RowBox[{"+", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "V"], 
+      RowBox[{
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            OverscriptBox["R", "^"], "\[CenterDot]", 
+            SubscriptBox[
+             OverscriptBox["n", "^"], "2"]}], ")"}], 
+          RowBox[{"\[Delta]", "(", 
+           RowBox[{"R", "-", 
+            SubscriptBox["R", "2"]}], ")"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            OverscriptBox["R", "^"], "\[CenterDot]", 
+            SubscriptBox[
+             OverscriptBox["n", "^"], "1"]}], ")"}], 
+          RowBox[{"\[Delta]", "(", 
+           RowBox[{"R", "-", 
+            SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["\[CapitalPsi]", "*"], "\[CapitalPsi]"}], ")"}], 
+       RowBox[{"(", 
+        FractionBox["\[Alpha]", "R"], ")"}], " ", 
+       SuperscriptBox["R", 
+        RowBox[{"d", "-", "1"}]], 
+       RowBox[{"\[DifferentialD]", "R"}], 
+       RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         OverscriptBox["\[Del]", "\[RightVector]"], 
+         SuperscriptBox["\[CapitalPsi]", "*"]}], "\[CenterDot]", 
+        RowBox[{
+         OverscriptBox["\[Del]", "\[RightVector]"], "\[CapitalPsi]"}]}], 
+       ")"}], 
+      RowBox[{"\[DifferentialD]", "V"}]}]}], "+", 
+    RowBox[{"2", "\[Mu]", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
+      RowBox[{
+       RowBox[{"\[DifferentialD]", "V"}], " ", 
+       RowBox[{
+        SuperscriptBox["\[CapitalPsi]", "*"], "(", 
+        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"V", "(", 
+          RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], "-", "E"}], ")"}], 
+       RowBox[{"\[CapitalPsi]", "(", 
+        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}]}]}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.764334121993534*^9, 3.7643341522796593`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
    RowBox[{"b", 
     RowBox[{
      SubscriptBox["\[Integral]", "V"], 
      RowBox[{
       RowBox[{"[", 
-       RowBox[{
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+       RowBox[{"\[Delta]", "(", 
+        RowBox[{"R", "-", 
+         SubscriptBox["R", "2"], "+", 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
       RowBox[{
        SuperscriptBox["\[CapitalPsi]", "*"], "(", 
        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], 
@@ -1305,37 +1438,49 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"-", 
      RowBox[{
-      SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
+      SubscriptBox["\[Integral]", "V"], 
       RowBox[{
-       RowBox[{"(", 
+       RowBox[{"[", 
         RowBox[{
          RowBox[{
-          OverscriptBox["\[Del]", "\[RightVector]"], 
-          SuperscriptBox["\[CapitalPsi]", "*"]}], "\[CenterDot]", 
+          RowBox[{"(", 
+           RowBox[{
+            OverscriptBox["R", "^"], "\[CenterDot]", 
+            SubscriptBox[
+             OverscriptBox["n", "^"], "2"]}], ")"}], 
+          RowBox[{"\[Delta]", "(", 
+           RowBox[{"R", "-", 
+            SubscriptBox["R", "2"]}], ")"}]}], "+", 
          RowBox[{
-          OverscriptBox["\[Del]", "\[RightVector]"], "\[CapitalPsi]"}]}], 
-        ")"}], 
-       RowBox[{"\[DifferentialD]", "V"}]}]}]}], "-", 
+          RowBox[{"(", 
+           RowBox[{
+            OverscriptBox["R", "^"], "\[CenterDot]", 
+            SubscriptBox[
+             OverscriptBox["n", "^"], "1"]}], ")"}], 
+          RowBox[{"\[Delta]", "(", 
+           RowBox[{"R", "-", 
+            SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["\[CapitalPsi]", "*"], "\[CapitalPsi]"}], ")"}], 
+       RowBox[{"(", 
+        FractionBox["\[Alpha]", "R"], ")"}], " ", 
+       SuperscriptBox["R", 
+        RowBox[{"d", "-", "1"}]], 
+       RowBox[{"\[DifferentialD]", "R"}], 
+       RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}], "-", 
     RowBox[{
-     SubscriptBox["\[Integral]", "V"], 
+     SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
      RowBox[{
-      RowBox[{"[", 
-       RowBox[{
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
       RowBox[{"(", 
        RowBox[{
-        SuperscriptBox["\[CapitalPsi]", "*"], "\[CapitalPsi]"}], ")"}], 
-      RowBox[{"(", 
-       FractionBox["\[Alpha]", "R"], ")"}], " ", 
-      SuperscriptBox["R", 
-       RowBox[{"d", "-", "1"}]], 
-      RowBox[{"\[DifferentialD]", "R"}], 
-      RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}], "-", 
+        RowBox[{
+         OverscriptBox["\[Del]", "\[RightVector]"], 
+         SuperscriptBox["\[CapitalPsi]", "*"]}], "\[CenterDot]", 
+        RowBox[{
+         OverscriptBox["\[Del]", "\[RightVector]"], "\[CapitalPsi]"}]}], 
+       ")"}], 
+      RowBox[{"\[DifferentialD]", "V"}]}]}], "-", 
     RowBox[{"2", "\[Mu]", 
      RowBox[{
       SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
@@ -1354,7 +1499,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.7634782990897303`*^9, 3.76347834075273*^9, {3.763478404734707*^9, 
    3.763478443658395*^9}, {3.763478507793516*^9, 3.763478510311441*^9}, {
-   3.763484097845828*^9, 3.7634841014777393`*^9}}],
+   3.763484097845828*^9, 3.7634841014777393`*^9}, {3.76433371748279*^9, 
+   3.764333717700089*^9}, {3.764334159392576*^9, 3.764334171054266*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -1364,13 +1510,12 @@ Cell[BoxData[
      SubscriptBox["\[Integral]", "V"], 
      RowBox[{
       RowBox[{"[", 
-       RowBox[{
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+       RowBox[{"\[Delta]", "(", 
+        RowBox[{"R", "-", 
+         SubscriptBox["R", "2"], "+", 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
       RowBox[{
        SuperscriptBox["\[CapitalPsi]", "*"], "(", 
        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], 
@@ -1402,12 +1547,24 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"[", 
        RowBox[{
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
-        RowBox[{"\[Delta]", "(", 
-         RowBox[{"R", "-", 
-          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           OverscriptBox["R", "^"], "\[CenterDot]", 
+           SubscriptBox[
+            OverscriptBox["n", "^"], "2"]}], ")"}], 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "2"]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           OverscriptBox["R", "^"], "\[CenterDot]", 
+           SubscriptBox[
+            OverscriptBox["n", "^"], "1"]}], ")"}], 
+         RowBox[{"\[Delta]", "(", 
+          RowBox[{"R", "-", 
+           SubscriptBox["R", "1"]}], ")"}]}]}], "]"}], 
       RowBox[{"(", 
        RowBox[{
         SuperscriptBox["\[CapitalPsi]", "*"], "\[CapitalPsi]"}], ")"}], 
@@ -1433,7 +1590,8 @@ Cell[BoxData[
         RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.76347853770089*^9, 3.763478572289145*^9}, {
-  3.763484085614266*^9, 3.76348409259015*^9}}],
+  3.763484085614266*^9, 3.76348409259015*^9}, {3.764333720556348*^9, 
+  3.764333720779916*^9}, {3.7643341907562847`*^9, 3.764334208101025*^9}}],
 
 Cell[TextData[{
  "To write this in the form of the Orange Review, let\[CloseCurlyQuote]s go \
@@ -1457,7 +1615,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -1542,7 +1700,9 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763478640387156*^9, 3.763478712660556*^9}, {
   3.763478799608369*^9, 3.763478820743319*^9}, {3.763484065845653*^9, 
-  3.7634840814225473`*^9}}],
+  3.7634840814225473`*^9}, {3.764333736331842*^9, 3.764333741442944*^9}, {
+  3.7643342670612793`*^9, 3.764334270099105*^9}, {3.764337506695799*^9, 
+  3.7643375067539043`*^9}}],
 
 Cell[TextData[{
  "But note that since  ",
@@ -1615,7 +1775,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -1690,7 +1850,7 @@ Cell[BoxData[
  CellChangeTimes->{
   3.763478938018209*^9, {3.763478970317356*^9, 3.763479055952528*^9}, {
    3.763479097428784*^9, 3.763479115984891*^9}, {3.763484050336075*^9, 
-   3.7634840605258703`*^9}}],
+   3.7634840605258703`*^9}, {3.764337537164658*^9, 3.7643375373878393`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -1705,7 +1865,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -1763,7 +1923,8 @@ Cell[BoxData[
       RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763479130871028*^9, 3.763479339718689*^9}, 
-   3.763481404301524*^9, {3.7634840405443077`*^9, 3.763484043903894*^9}}],
+   3.763481404301524*^9, {3.7634840405443077`*^9, 3.763484043903894*^9}, {
+   3.764337573461227*^9, 3.764337573658394*^9}}],
 
 Cell["\<\
 Which finally gives an expression that is the generalization of Eq. 3.4 from \
@@ -1903,12 +2064,13 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"\[Delta]", "(", 
       RowBox[{"R", "-", 
-       SubscriptBox["R", "2"]}], ")"}], "-", 
+       SubscriptBox["R", "2"]}], ")"}], "+", 
      RowBox[{"\[Delta]", "(", 
       RowBox[{"R", "-", 
        SubscriptBox["R", "1"]}], ")"}]}], "]"}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.76348092936517*^9, 3.7634809507088127`*^9}}],
+ CellChangeTimes->{{3.76348092936517*^9, 3.7634809507088127`*^9}, {
+  3.764337575618607*^9, 3.764337575826167*^9}}],
 
 Cell[TextData[{
  "These operators act on the full wavefunction ",
@@ -1995,7 +2157,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2061,7 +2223,8 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763481173696916*^9, 3.7634811979205713`*^9}, {
    3.763481241241081*^9, 3.763481288214533*^9}, 3.7634813961498613`*^9, {
-   3.763484025760853*^9, 3.763484029616458*^9}}],
+   3.763484025760853*^9, 3.763484029616458*^9}, {3.764337585773344*^9, 
+   3.764337585985838*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -2074,7 +2237,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2153,7 +2316,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.763481294471661*^9, 3.76348130878926*^9}, {
    3.763481339339576*^9, 3.763481355446615*^9}, {3.763481424704461*^9, 
    3.763481458959257*^9}, 3.763481519703388*^9, {3.763484020495063*^9, 
-   3.7634840231055183`*^9}}],
+   3.7634840231055183`*^9}, {3.764337588618064*^9, 3.764337588857841*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -2166,7 +2329,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2242,7 +2405,8 @@ Cell[BoxData[
             RowBox[{"\[PartialD]", "R"}]]}]}], ")"}]}], ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763481470298699*^9, 3.763481521527433*^9}, {
-  3.7634840088333273`*^9, 3.76348401623178*^9}}],
+  3.7634840088333273`*^9, 3.76348401623178*^9}, {3.764337590538035*^9, 
+  3.764337590753776*^9}}],
 
 Cell["Now ", "Text",
  CellChangeTimes->{{3.763481554340966*^9, 3.7634815559415827`*^9}}],
@@ -2291,7 +2455,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2383,7 +2547,8 @@ Cell[BoxData[
             RowBox[{"\[PartialD]", "R"}]]}]}], ")"}]}], ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.7634816328118563`*^9, 3.763481646273262*^9}, {
-  3.763483997481976*^9, 3.7634840036133327`*^9}}],
+  3.763483997481976*^9, 3.7634840036133327`*^9}, {3.764337596937895*^9, 
+  3.76433759720129*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -2396,7 +2561,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2484,7 +2649,8 @@ Cell[BoxData[
                RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], ")"}]}], 
             RowBox[{"\[PartialD]", "R"}]]}]}], ")"}]}], ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.763481670452785*^9, 3.763481715139797*^9}}],
+ CellChangeTimes->{{3.763481670452785*^9, 3.763481715139797*^9}, {
+  3.764337600993829*^9, 3.764337601233118*^9}}],
 
 Cell["We must evaluate:", "Text",
  CellChangeTimes->{{3.7634817406680593`*^9, 3.76348174430119*^9}}],
@@ -2556,7 +2722,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2665,7 +2831,8 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{
   3.763481725275641*^9, {3.763481840429047*^9, 3.763481901422611*^9}, {
-   3.763483986650221*^9, 3.763483988266212*^9}}],
+   3.763483986650221*^9, 3.763483988266212*^9}, {3.76433760635382*^9, 
+   3.764337606577014*^9}}],
 
 Cell["Which simplifies:", "Text",
  CellChangeTimes->{{3.763481915670187*^9, 3.763481918043496*^9}}],
@@ -2681,7 +2848,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2785,7 +2952,8 @@ Cell[BoxData[
             RowBox[{"\[PartialD]", "R"}]]}]}], ")"}]}], ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763481919113785*^9, 3.763482020848061*^9}, {
-  3.7634839736411057`*^9, 3.76348397669055*^9}}],
+  3.7634839736411057`*^9, 3.76348397669055*^9}, {3.764337608377427*^9, 
+  3.764337608616803*^9}}],
 
 Cell[TextData[{
  "Now we collect the ",
@@ -2809,7 +2977,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2887,7 +3055,7 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763482104526494*^9, 3.763482176921336*^9}, {
   3.763482220332378*^9, 3.7634822475851603`*^9}, {3.763483958673842*^9, 
-  3.763483968889434*^9}}],
+  3.763483968889434*^9}, {3.76433761624115*^9, 3.7643376164565773`*^9}}],
 
 Cell[TextData[{
  "Compare to ",
@@ -2902,7 +3070,7 @@ Cell[TextData[{
         RowBox[{
          RowBox[{"\[Delta]", "(", 
           RowBox[{"R", "-", 
-           SubscriptBox["R", "2"]}], ")"}], "-", 
+           SubscriptBox["R", "2"]}], ")"}], "+", 
          RowBox[{"\[Delta]", "(", 
           RowBox[{"R", "-", 
            SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -2964,7 +3132,8 @@ Cell[TextData[{
   FormatType->"TraditionalForm"],
  "."
 }], "Text",
- CellChangeTimes->{{3.763775401650318*^9, 3.763775406872279*^9}}],
+ CellChangeTimes->{{3.763775401650318*^9, 3.763775406872279*^9}, {
+  3.764337622389826*^9, 3.764337622613696*^9}}],
 
 Cell[TextData[{
  "Now with the understanding that the volume element is ",
@@ -3071,12 +3240,13 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"\[Delta]", "(", 
       RowBox[{"R", "-", 
-       SubscriptBox["R", "2"]}], ")"}], "-", 
+       SubscriptBox["R", "2"]}], ")"}], "+", 
      RowBox[{"\[Delta]", "(", 
       RowBox[{"R", "-", 
        SubscriptBox["R", "1"]}], ")"}]}], "]"}], " "}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.763775674796217*^9, 3.763775680578863*^9}}],
+ CellChangeTimes->{{3.763775674796217*^9, 3.763775680578863*^9}, {
+  3.764337636615879*^9, 3.76433763685557*^9}}],
 
 Cell["\<\
 Let\[CloseCurlyQuote]s try to make this look manifestly symmetric by \
@@ -3693,7 +3863,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -3766,7 +3936,8 @@ Cell[BoxData[
       RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763484677893194*^9, 3.76348477357763*^9}, {
-  3.7634848053323507`*^9, 3.7634848072422047`*^9}}],
+  3.7634848053323507`*^9, 3.7634848072422047`*^9}, {3.7643376540152473`*^9, 
+  3.7643376542469263`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -3779,7 +3950,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -3888,7 +4059,8 @@ Cell[BoxData[
        RowBox[{"\[Psi]", "(", 
         RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.763484811954624*^9, 3.76348485700629*^9}}],
+ CellChangeTimes->{{3.763484811954624*^9, 3.76348485700629*^9}, {
+  3.764337656111743*^9, 3.764337656359034*^9}}],
 
 Cell["\<\
 Which allows us to make the replacement above for the second integral on the \
@@ -3907,7 +4079,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4052,7 +4224,8 @@ Cell[BoxData[
      FontColor->RGBColor[1, 0, 0]]}]}], TraditionalForm]], "EquationNumbered",\
 
  CellChangeTimes->{
-  3.763484872059705*^9, {3.763484910990889*^9, 3.763484916803988*^9}}],
+  3.763484872059705*^9, {3.763484910990889*^9, 3.763484916803988*^9}, {
+   3.764337658799684*^9, 3.764337659158866*^9}}],
 
 Cell["\<\
 And we see that our two \[OpenCurlyDoubleQuote]Bloch operator\
@@ -4072,7 +4245,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4152,7 +4325,8 @@ Cell[BoxData[
        RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{
-  3.763484978990067*^9, {3.763485019147015*^9, 3.763485062094748*^9}}],
+  3.763484978990067*^9, {3.763485019147015*^9, 3.763485062094748*^9}, {
+   3.764337667174899*^9, 3.7643376673983994`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -4165,7 +4339,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4236,7 +4410,8 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.7634850987773123`*^9, 3.763485129555827*^9}, {
    3.7634852075573797`*^9, 3.763485218643244*^9}, 3.763486549426772*^9, {
-   3.763486663949033*^9, 3.763486678741796*^9}}],
+   3.763486663949033*^9, 3.763486678741796*^9}, {3.764337669982637*^9, 
+   3.764337670246408*^9}}],
 
 Cell[TextData[{
  "Okay!  Now ",
@@ -4344,7 +4519,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4447,7 +4622,8 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763486885527783*^9, 3.76348698055515*^9}, {
   3.7634870440786324`*^9, 3.763487118936761*^9}, {3.763487162149311*^9, 
-  3.763487170012826*^9}, {3.763487207676705*^9, 3.763487233923452*^9}}],
+  3.763487170012826*^9}, {3.763487207676705*^9, 3.763487233923452*^9}, {
+  3.764338184714333*^9, 3.7643381849185743`*^9}}],
 
 Cell["Performing the angular integrals", "Text",
  CellChangeTimes->{{3.763487354391046*^9, 3.763487359570386*^9}}],
@@ -4483,7 +4659,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4564,7 +4740,8 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.7634873622304173`*^9, 3.7634874093861933`*^9}, {
   3.763487440048888*^9, 3.763487459214219*^9}, {3.763487503436769*^9, 
-  3.763487506188327*^9}, {3.763487631062151*^9, 3.7634876341642113`*^9}}],
+  3.763487506188327*^9}, {3.763487631062151*^9, 3.7634876341642113`*^9}, {
+  3.764338187414678*^9, 3.764338187614275*^9}}],
 
 Cell["where", "Text",
  CellChangeTimes->{{3.763487462161076*^9, 3.7634874637734423`*^9}}],
@@ -4652,7 +4829,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4660,7 +4837,8 @@ Cell[BoxData[
        SubsuperscriptBox["B", "n", 
         RowBox[{"(", "j", ")"}]], "(", "R", ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.763487577656637*^9, 3.763487600157538*^9}}],
+ CellChangeTimes->{{3.763487577656637*^9, 3.763487600157538*^9}, {
+  3.764338192079818*^9, 3.764338192262032*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -4864,7 +5042,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -4933,7 +5111,8 @@ Cell[BoxData[
        RowBox[{"\[Psi]", "(", 
         RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{3.7635074412624683`*^9}],
+ CellChangeTimes->{
+  3.7635074412624683`*^9, {3.764338198622367*^9, 3.764338198821979*^9}}],
 
 Cell["Now reads", "Text",
  CellChangeTimes->{{3.763507446949654*^9, 3.763507449455901*^9}}],
@@ -4971,7 +5150,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5077,7 +5256,8 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{
   3.7635073891894503`*^9, {3.763507457553686*^9, 3.763507508833597*^9}, {
-   3.763507717273954*^9, 3.763507718552884*^9}}],
+   3.763507717273954*^9, 3.763507718552884*^9}, {3.764338205494121*^9, 
+   3.764338205669569*^9}}],
 
 Cell["Using the adiabatic equation and simplifying,", "Text",
  CellChangeTimes->{{3.763507534529105*^9, 3.763507557618169*^9}}],
@@ -5113,7 +5293,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5229,7 +5409,8 @@ Cell[BoxData[
             RowBox[{"(", "j", ")"}]], "(", "R", ")"}]}]}]}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.7635075306412287`*^9, 3.7635076868472147`*^9}, {
-  3.7635077344737587`*^9, 3.763507787019095*^9}}],
+  3.7635077344737587`*^9, 3.763507787019095*^9}, {3.764338210196501*^9, 
+  3.764338210373274*^9}}],
 
 Cell[TextData[{
  "Employing the definitions ",
@@ -5296,7 +5477,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5446,7 +5627,8 @@ Cell[BoxData[
             RowBox[{"(", "j", ")"}]], "(", "R", ")"}]}]}]}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{
-  3.763507803307251*^9, {3.7635079347854567`*^9, 3.76350800606348*^9}}],
+  3.763507803307251*^9, {3.7635079347854567`*^9, 3.76350800606348*^9}, {
+   3.764338214909871*^9, 3.7643382150844812`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -5479,7 +5661,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5604,7 +5786,7 @@ Cell[BoxData[
             RowBox[{"(", "j", ")"}]], "(", "R", ")"}]}]}]}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.76350801337535*^9, 3.763508054872801*^9}, 
-   3.763508407943644*^9}],
+   3.763508407943644*^9, {3.764338218365356*^9, 3.7643382185327673`*^9}}],
 
 Cell[TextData[{
  "Using the fact that ",
@@ -5651,7 +5833,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5776,7 +5958,7 @@ Cell[BoxData[
             RowBox[{"(", "j", ")"}]], "(", "R", ")"}]}]}]}]}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763508073459556*^9, 3.763508170482257*^9}, 
-   3.7635084030075207`*^9}],
+   3.7635084030075207`*^9, {3.7643382216932583`*^9, 3.764338221893024*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -5809,7 +5991,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
-             SubscriptBox["R", "2"]}], ")"}], "-", 
+             SubscriptBox["R", "2"]}], ")"}], "+", 
            RowBox[{"\[Delta]", "(", 
             RowBox[{"R", "-", 
              SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5936,7 +6118,7 @@ Cell[BoxData[
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{
   3.763508284473159*^9, 3.763508394669241*^9, {3.763508512431198*^9, 
-   3.7635085196376143`*^9}}],
+   3.7635085196376143`*^9}, {3.764338224919433*^9, 3.764338225124648*^9}}],
 
 Cell[TextData[{
  "Finally, differentiating with respect to ",
@@ -5991,7 +6173,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
-          SubscriptBox["R", "2"]}], ")"}], "-", 
+          SubscriptBox["R", "2"]}], ")"}], "+", 
         RowBox[{"\[Delta]", "(", 
          RowBox[{"R", "-", 
           SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
@@ -5999,7 +6181,8 @@ Cell[BoxData[
        SubsuperscriptBox["B", "n", 
         RowBox[{"(", "j", ")"}]], "(", "R", ")"}]}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
- CellChangeTimes->{{3.7635082532815*^9, 3.763508265137575*^9}}],
+ CellChangeTimes->{{3.7635082532815*^9, 3.763508265137575*^9}, {
+  3.764338228588575*^9, 3.7643382287724752`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -7204,6 +7387,48 @@ Cell[BoxData[
   3.763809592506884*^9, 3.763809594017414*^9}, {3.7638098388443203`*^9, 
   3.7638098390516157`*^9}}],
 
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["N", "\[Beta]", "2"], "=", 
+   RowBox[{
+    UnderscriptBox["\[Sum]", "i"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       UnderscriptBox["\[Sum]", "j"], 
+       RowBox[{
+        UnderscriptBox["\[Sum]", "m"], 
+        RowBox[{
+         SubscriptBox["c", 
+          RowBox[{"j", ",", "m", ",", "\[Beta]"}]], 
+         RowBox[{
+          SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[CapitalPhi]", "i"], "(", 
+            RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], " ", 
+           RowBox[{
+            SubsuperscriptBox["B", "m", 
+             RowBox[{"(", "i", ")"}]], "(", "R", ")"}], 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[CapitalPhi]", "j"], "(", 
+             RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], " ", "[", 
+            RowBox[{
+             RowBox[{"\[Delta]", "(", 
+              RowBox[{"R", "-", 
+               SubscriptBox["R", "2"]}], ")"}], "+", 
+             RowBox[{"\[Delta]", "(", 
+              RowBox[{"R", "-", 
+               SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+           SuperscriptBox["R", 
+            RowBox[{"d", "-", "1", "-", "\[Alpha]"}]], 
+           RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}], 
+           RowBox[{"\[DifferentialD]", "R"}]}]}]}]}]}], ")"}], "2"]}]}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.764338830697336*^9, 3.7643388365396557`*^9}}],
+
 Cell[TextData[{
  "We require ",
  Cell[BoxData[
@@ -7249,10 +7474,28 @@ Cell[TextData[{
     SubscriptBox["\[Delta]", 
      RowBox[{"i", ",", "j"}]]}], TraditionalForm]],
   CellChangeTimes->{{3.763809741172778*^9, 3.763809775394313*^9}, {
-   3.7638098419714737`*^9, 3.763809842163361*^9}}]
+   3.7638098419714737`*^9, 3.763809842163361*^9}}],
+ " for fixed ",
+ Cell[BoxData[
+  FormBox["R", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
 }], "Text",
  CellChangeTimes->{{3.7638097376222267`*^9, 3.763809738851803*^9}, {
-  3.7638098988603*^9, 3.7638099374305573`*^9}}],
+  3.7638098988603*^9, 3.7638099374305573`*^9}, {3.7643385917375107`*^9, 
+  3.764338596009007*^9}}],
+
+Cell[TextData[{
+ "If instead of the usual definition of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[CapitalPhi]", "i"], "(", 
+    RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " we require"
+}], "Text",
+ CellChangeTimes->{{3.764338542418996*^9, 3.764338556827428*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -7275,40 +7518,1484 @@ Cell[BoxData[
         RowBox[{"R", "-", 
          SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
      SuperscriptBox["R", 
-      RowBox[{"d", "-", "1"}]], 
+      RowBox[{"d", "-", "1", "-", 
+       RowBox[{"2", "\[Alpha]"}]}]], 
      RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}], 
      RowBox[{"\[DifferentialD]", "R"}]}]}], "=", 
    RowBox[{
-    RowBox[{"\[Integral]", 
-     RowBox[{
+    RowBox[{
+     RowBox[{"\[Integral]", 
       RowBox[{
-       SubscriptBox["\[CapitalPhi]", "i"], "(", 
        RowBox[{
-        SubscriptBox["R", "1"], ",", "\[CapitalOmega]"}], ")"}], " ", 
+        SubscriptBox["\[CapitalPhi]", "i"], "(", 
+        RowBox[{
+         SubscriptBox["R", "1"], ",", "\[CapitalOmega]"}], ")"}], " ", 
+       RowBox[{
+        SubscriptBox["\[CapitalPhi]", "j"], "(", 
+        RowBox[{
+         SubscriptBox["R", "1"], ",", "\[CapitalOmega]"}], ")"}], " ", 
+       SubsuperscriptBox["R", "1", 
+        RowBox[{"d", "-", "1", "-", 
+         RowBox[{"2", "\[Alpha]"}]}]], 
+       RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}], "+", 
+     RowBox[{"\[Integral]", 
       RowBox[{
-       SubscriptBox["\[CapitalPhi]", "j"], "(", 
        RowBox[{
-        SubscriptBox["R", "1"], ",", "\[CapitalOmega]"}], ")"}], " ", 
-      SubsuperscriptBox["R", "1", 
-       RowBox[{"d", "-", "1"}]], 
-      RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}], "+", 
-    RowBox[{"\[Integral]", 
-     RowBox[{
-      RowBox[{
-       SubscriptBox["\[CapitalPhi]", "i"], "(", 
+        SubscriptBox["\[CapitalPhi]", "i"], "(", 
+        RowBox[{
+         SubscriptBox["R", "2"], ",", "\[CapitalOmega]"}], ")"}], " ", 
        RowBox[{
-        SubscriptBox["R", "2"], ",", "\[CapitalOmega]"}], ")"}], " ", 
-      RowBox[{
-       SubscriptBox["\[CapitalPhi]", "j"], "(", 
-       RowBox[{
-        SubscriptBox["R", "2"], ",", "\[CapitalOmega]"}], ")"}], " ", 
-      SubsuperscriptBox["R", "2", 
-       RowBox[{"d", "-", "1"}]], 
-      RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}]}], 
-  TraditionalForm]], "EquationNumbered",
+        SubscriptBox["\[CapitalPhi]", "j"], "(", 
+        RowBox[{
+         SubscriptBox["R", "2"], ",", "\[CapitalOmega]"}], ")"}], " ", 
+       SubsuperscriptBox["R", "2", 
+        RowBox[{"d", "-", "1", "-", 
+         RowBox[{"2", "\[Alpha]"}]}]], 
+       RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}]}]}]}], "=", 
+    SubscriptBox["\[Delta]", 
+     RowBox[{"i", ",", "j"}]]}]}], TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.763809741172778*^9, 3.763809775394313*^9}, {
   3.7638098419714737`*^9, 3.763809842163361*^9}, {3.763809951881218*^9, 
-  3.763810043956648*^9}}]
+  3.763810043956648*^9}, {3.7643385589476233`*^9, 3.764338561163566*^9}, {
+  3.764338763800702*^9, 3.7643387833854513`*^9}}],
+
+Cell["then", "Text",
+ CellChangeTimes->{{3.7643386048653316`*^9, 3.7643386051523733`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["N", "\[Beta]", "2"], "=", 
+   RowBox[{
+    UnderscriptBox["\[Sum]", "i"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       UnderscriptBox["\[Sum]", "j"], 
+       RowBox[{
+        UnderscriptBox["\[Sum]", "m"], 
+        RowBox[{
+         SubscriptBox["c", 
+          RowBox[{"j", ",", "m", ",", "\[Beta]"}]], 
+         RowBox[{
+          SubscriptBox["\[Integral]", "\[ScriptCapitalV]"], 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["B", "m", 
+             RowBox[{"(", "i", ")"}]], "(", "R", ")"}], 
+           SuperscriptBox["R", "\[Alpha]"], 
+           RowBox[{
+            SubscriptBox["\[CapitalPhi]", "i"], "(", 
+            RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], " ", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[CapitalPhi]", "j"], "(", 
+             RowBox[{"R", ",", "\[CapitalOmega]"}], ")"}], " ", "[", 
+            RowBox[{
+             RowBox[{"\[Delta]", "(", 
+              RowBox[{"R", "-", 
+               SubscriptBox["R", "2"]}], ")"}], "+", 
+             RowBox[{"\[Delta]", "(", 
+              RowBox[{"R", "-", 
+               SubscriptBox["R", "1"]}], ")"}]}], "]"}], 
+           SuperscriptBox["R", 
+            RowBox[{"d", "-", "1", "-", 
+             RowBox[{"2", "\[Alpha]"}]}]], 
+           RowBox[{"\[DifferentialD]", "\[CapitalOmega]"}], 
+           RowBox[{"\[DifferentialD]", "R"}]}]}]}]}]}], ")"}], "2"]}]}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.7643386063537197`*^9, 3.764338682013365*^9}, {
+  3.7643387132517557`*^9, 3.7643387342317963`*^9}, {3.764338806435032*^9, 
+  3.7643388118874483`*^9}, {3.764338864479851*^9, 3.764338899540718*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Box Matching", "Subsection",
+ CellChangeTimes->{{3.763909544035883*^9, 3.763909549728635*^9}}],
+
+Cell[TextData[{
+ "The R-matrix propagator requires that we match solutions across the \
+R-matrix boxes.  Let\[CloseCurlyQuote]s write out the process in a simple \
+notation working from Jim Burke\[CloseCurlyQuote]s thesis. We first solve for \
+the linear combination of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Z", 
+    RowBox[{"i", ",", "\[Beta]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " in each box that matches across the boundary.  Assume that in Box A, one \
+has a \[OpenCurlyDoubleQuote]final R-matrix\[CloseCurlyDoubleQuote] with \
+dimensions ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["N", "R", "A"], "\[Times]", 
+    SubsuperscriptBox["N", "R", "A"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["N", "R", "A"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the number of open channels on the right edge of box A.  The conditions \
+for continuity of the solutions and derivatives are:"
+}], "Text",
+ CellChangeTimes->{{3.7639095551935263`*^9, 3.7639096921828833`*^9}, {
+  3.763909753170019*^9, 3.7639097628261147`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Sum]", 
+       RowBox[{"\[Beta]", "=", "1"}]], 
+      SubsuperscriptBox["\[Beta]", "max", "A"]], 
+     RowBox[{
+      SubsuperscriptBox["Z", 
+       RowBox[{"i", ",", "\[Beta]"}], "A"], 
+      SubsuperscriptBox["D", "\[Beta]", "A"]}]}], "-", 
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Sum]", 
+       RowBox[{
+        RowBox[{"\[Beta]", "'"}], "=", "1"}]], 
+      SubsuperscriptBox["\[Beta]", "max", "B"]], 
+     RowBox[{
+      SubsuperscriptBox["Z", 
+       RowBox[{"i", ",", 
+        RowBox[{"\[Beta]", "'"}]}], "B"], 
+      SubsuperscriptBox["D", 
+       RowBox[{"\[Beta]", "'"}], "B"]}]}]}], "=", "0"}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.7639096989253473`*^9, 3.763909746419777*^9}, {
+  3.763909899726733*^9, 3.7639099017269363`*^9}, {3.7639114249197283`*^9, 
+  3.7639114327514267`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Sum]", 
+       RowBox[{"\[Beta]", "=", "1"}]], 
+      SubsuperscriptBox["\[Beta]", "max", "A"]], 
+     RowBox[{
+      SubsuperscriptBox["Z", 
+       RowBox[{"i", ",", "\[Beta]"}], "A"], 
+      SubsuperscriptBox["b", "\[Beta]", "A"], 
+      SubsuperscriptBox["D", "\[Beta]", "A"]}]}], "+", 
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Sum]", 
+       RowBox[{
+        RowBox[{"\[Beta]", "'"}], "=", "1"}]], 
+      SubsuperscriptBox["\[Beta]", "max", "B"]], 
+     RowBox[{
+      SubsuperscriptBox["Z", 
+       RowBox[{"i", ",", 
+        RowBox[{"\[Beta]", "'"}]}], "B"], 
+      SubsuperscriptBox["b", 
+       RowBox[{"\[Beta]", "'"}], "B"], 
+      SubsuperscriptBox["D", 
+       RowBox[{"\[Beta]", "'"}], "B"]}]}]}], "=", "0"}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.763909544035883*^9, 3.763909548688382*^9}, {
+  3.7639097735573473`*^9, 3.763909796615699*^9}, {3.763909903494451*^9, 
+  3.763909906790708*^9}, {3.763911414249107*^9, 3.7639114220562353`*^9}}],
+
+Cell[TextData[{
+ "This is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", 
+    SubsuperscriptBox["N", "R", "A"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Beta]", "max", "A"], "+", 
+     SubsuperscriptBox["\[Beta]", "max", "B"]}], "=", 
+    RowBox[{
+     SubsuperscriptBox["N", "R", "A"], "+", 
+     SubsuperscriptBox["\[Beta]", "max", "B"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", but since ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Beta]", "max", "B"], ">", 
+    SubsuperscriptBox["N", "R", "A"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (since both ends are typically open in box B) we need an additional \
+condition to determine the D\[CloseCurlyQuote]s.  This condition is that the \
+the superposed solutions satisfy constant log-derivative at the right edge of \
+box B:"
+}], "Text",
+ CellChangeTimes->{{3.763910893077313*^9, 3.763910953366053*^9}, {
+  3.763911162915392*^9, 3.7639112234940777`*^9}, {3.763911306839052*^9, 
+  3.763911344219378*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    OverscriptBox[
+     UnderscriptBox["\[Sum]", 
+      RowBox[{
+       RowBox[{"\[Beta]", "'"}], "=", "1"}]], 
+     SubsuperscriptBox["\[Beta]", "max", "B"]], 
+    RowBox[{
+     SubsuperscriptBox["Z", 
+      RowBox[{"i", ",", 
+       RowBox[{"\[Beta]", "'"}]}], "B"], 
+     SubsuperscriptBox["b", 
+      RowBox[{"\[Beta]", "'"}], "B"], 
+     SubsuperscriptBox["D", 
+      RowBox[{"\[Beta]", "'"}], "B"]}]}], "=", 
+   RowBox[{
+    SubscriptBox["b", 
+     SubscriptBox["\[Beta]", "f"]], 
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Sum]", 
+       RowBox[{
+        RowBox[{"\[Beta]", "'"}], "=", "1"}]], 
+      SubsuperscriptBox["\[Beta]", "max", "B"]], 
+     RowBox[{
+      SubsuperscriptBox["Z", 
+       RowBox[{"i", ",", 
+        RowBox[{"\[Beta]", "'"}]}], "B"], 
+      SubsuperscriptBox["D", 
+       RowBox[{"\[Beta]", "'"}], "B"]}]}]}]}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.76391135828439*^9, 3.763911397875916*^9}, {
+  3.763911442130691*^9, 3.7639114496978807`*^9}}],
+
+Cell[TextData[{
+ "Where the index ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " runs from ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["N", "L", "B"], "+", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Beta]", "max", "B"], "=", 
+    RowBox[{
+     SubsuperscriptBox["N", "L", "B"], "+", 
+     SubsuperscriptBox["N", "R", "B"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". In matrix form, these three equations now read:"
+}], "Text",
+ CellChangeTimes->{{3.763911648407763*^9, 3.763911651259824*^9}, {
+  3.763912580573015*^9, 3.7639125918800173`*^9}, {3.763912623185137*^9, 
+  3.763912657415963*^9}, {3.763912927837063*^9, 3.7639129382996187`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", "11", "A"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{"1", 
+           SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"],
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           SubsuperscriptBox["N", "R", "A"], "1"}], "A"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["...",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           SubsuperscriptBox["N", "R", "A"], 
+           SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"],
+         FontColor->RGBColor[0, 0, 1]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "A"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "A"]]}
+      }], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", "11", "B"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{"1", 
+           SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"],
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           SubsuperscriptBox["N", "L", "B"], "1"}], "B"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["...",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           SubsuperscriptBox["N", "L", "B"], 
+           SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"],
+         FontColor->RGBColor[0, 0, 1]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "B"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "B"]]}
+      }], ")"}]}]}], TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.763911859469879*^9, 3.763911881424765*^9}, 
+   3.764601606611825*^9}],
+
+Cell[TextData[{
+ "This is ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["N", "R", "A"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " equations for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Beta]", "max", "A"], "+", 
+     SubsuperscriptBox["\[Beta]", "max", "B"]}], "=", 
+    RowBox[{
+     RowBox[{
+      SubsuperscriptBox["N", "R", "A"], "+", 
+      SubsuperscriptBox["\[Beta]", "max", "B"]}], "=", 
+     RowBox[{
+      RowBox[{"2", 
+       SubsuperscriptBox["N", "R", "A"]}], "+", 
+      SubsuperscriptBox["N", "R", "B"]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " unknowns"
+}], "Text",
+ CellChangeTimes->{{3.763913168620942*^9, 3.7639132040138683`*^9}, {
+  3.763913246805613*^9, 3.7639132587795486`*^9}, {3.763913318349806*^9, 
+  3.763913319739624*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "A"], 
+          SubsuperscriptBox["Z", "11", "A"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "A"], "A"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{"1", 
+            SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"]}],
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["N", "R", "A"], "A"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "R", "A"], "1"}], "A"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "A"], "A"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "R", "A"], 
+            SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"]}],
+         FontColor->RGBColor[1, 0, 0]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "A"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "A"]]}
+      }], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", GridBox[{
+        {
+         StyleBox[
+          RowBox[{
+           SubsuperscriptBox["b", "1", "B"], 
+           SubsuperscriptBox["Z", "11", "B"]}],
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox["\[CenterEllipsis]",
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox[
+          RowBox[{
+           SubsuperscriptBox["b", 
+            SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+           SubsuperscriptBox["Z", 
+            RowBox[{"1", 
+             SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"]}],
+          FontColor->RGBColor[1, 0, 0]]},
+        {
+         StyleBox["\[VerticalEllipsis]",
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox["\[VerticalEllipsis]",
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox["\[VerticalEllipsis]",
+          FontColor->RGBColor[1, 0, 0]]},
+        {
+         StyleBox[
+          RowBox[{
+           SubsuperscriptBox["b", "1", "B"], 
+           SubsuperscriptBox["Z", 
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "1"}], "B"]}],
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox["\[CenterEllipsis]",
+          FontColor->RGBColor[1, 0, 0]], 
+         StyleBox[
+          RowBox[{
+           SubsuperscriptBox["b", 
+            SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+           SubsuperscriptBox["Z", 
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], 
+             SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"]}],
+          FontColor->RGBColor[1, 0, 0]]}
+       }], ")"}]}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "B"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "B"]]}
+      }], ")"}]}]}], TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{
+  3.763911863652717*^9, 3.7639119132428217`*^9, {3.76391195101579*^9, 
+   3.763911953669999*^9}, {3.763912538455324*^9, 3.763912559060775*^9}, {
+   3.763912894047616*^9, 3.7639129040770884`*^9}, {3.7639136732749777`*^9, 
+   3.763913687246118*^9}, {3.764601589900421*^9, 3.7646015963004436`*^9}}],
+
+Cell[TextData[{
+ "This is another ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["N", "R", "A"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " equations"
+}], "Text",
+ CellChangeTimes->{{3.763913287027067*^9, 3.7639133234025183`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", "1"}]]}],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}]]}],
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", 
+             SubsuperscriptBox["N", "R", "B"]}], ",", "1"}]]}],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", 
+             SubsuperscriptBox["N", "R", "B"]}], ",", " ", 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}]]}],
+         FontColor->RGBColor[1, 0.5, 0]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "B"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "B"]]}
+      }], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["b", "f"], "(", GridBox[{
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", "1"}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", " ", 
+           SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", 
+            SubsuperscriptBox["N", "R", "B"]}], ",", "1"}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["...",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", 
+            SubsuperscriptBox["N", "R", "B"]}], ",", " ", 
+           SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "B"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "B"]]}
+      }], ")"}]}]}], TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{
+  3.763911959479422*^9, {3.763912491413802*^9, 3.763912506005617*^9}, {
+   3.763912732888014*^9, 3.763912815048177*^9}, {3.763982728452736*^9, 
+   3.7639827533094597`*^9}, {3.7646015653120003`*^9, 3.764601573135066*^9}}],
+
+Cell[TextData[{
+ "This is the remaining ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["N", "R", "B"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " equations which gives ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["N", "R", "B"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " solutions indexed by ",
+ Cell[BoxData[
+  FormBox["\[Beta]", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ": "
+}], "Text",
+ CellChangeTimes->{{3.76391329423312*^9, 3.7639133824667797`*^9}, {
+  3.763913449895804*^9, 3.7639134531575613`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["Z", 
+    RowBox[{"i", ",", "\[Beta]"}], "f"], "=", 
+   RowBox[{
+    SubsuperscriptBox["N", "\[Beta]", "f"], 
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Sum]", 
+       RowBox[{
+        RowBox[{"\[Beta]", "'"}], "=", "1"}]], 
+      SubsuperscriptBox["\[Beta]", "max", "B"]], 
+     RowBox[{
+      SubsuperscriptBox["Z", 
+       RowBox[{"i", ",", 
+        RowBox[{"\[Beta]", "'"}]}], "B"], 
+      SubsuperscriptBox["D", 
+       RowBox[{
+        RowBox[{"\[Beta]", "'"}], ",", "\[Beta]"}], "B"]}]}]}]}], 
+  TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.763913384428132*^9, 3.763913445289701*^9}}],
+
+Cell["\<\
+Now we want to combine these into a single matrix eigenvalue problem\
+\>", "Text",
+ CellChangeTimes->{{3.763913699395514*^9, 3.763913712565487*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", "11", "A"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{"1", 
+           SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         RowBox[{"-", 
+          SubsuperscriptBox["Z", "11", "B"]}],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         RowBox[{"-", 
+          SubsuperscriptBox["Z", 
+           RowBox[{"1", 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"]}],
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           SubsuperscriptBox["N", "R", "A"], "1"}], "A"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["...",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           SubsuperscriptBox["N", "R", "A"], 
+           SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         RowBox[{"-", 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "1"}], "B"]}],
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["...",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox[
+         RowBox[{"-", 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"]}],
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "A"], 
+          SubsuperscriptBox["Z", "11", "A"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "A"], "A"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{"1", 
+            SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "B"], 
+          SubsuperscriptBox["Z", "11", "B"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{"1", 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"]}],
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["N", "R", "A"], "A"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "R", "A"], "1"}], "A"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "A"], "A"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "R", "A"], 
+            SubsuperscriptBox["\[Beta]", "max", "A"]}], "A"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "B"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "1"}], "B"]}],
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+          SubsuperscriptBox["Z", 
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"]}],
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", "1"}]]}],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}]]}],
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", "1", "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", 
+             SubsuperscriptBox["N", "R", "B"]}], ",", "1"}]]}],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         RowBox[{
+          SubsuperscriptBox["b", 
+           SubsuperscriptBox["\[Beta]", "max", "B"], "B"], 
+          SubscriptBox["Z", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["N", "L", "B"], "+", 
+             SubsuperscriptBox["N", "R", "B"]}], ",", " ", 
+            SubsuperscriptBox["\[Beta]", "max", "B"]}]]}],
+         FontColor->RGBColor[1, 0.5, 0]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "A"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubsuperscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "A"], "A"]},
+       {
+        SubsuperscriptBox["D", "1", "B"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubsuperscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "B"], "B"]}
+      }], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["b", "f"], "(", GridBox[{
+       {
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[0, 0, 1]], 
+        StyleBox["0",
+         FontColor->RGBColor[0, 0, 1]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0, 0]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", "1"}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", "1"}], ",", " ", 
+           SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[VerticalEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]]},
+       {
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["\[CenterEllipsis]",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["0",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", 
+            SubsuperscriptBox["N", "R", "B"]}], ",", "1"}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox["...",
+         FontColor->RGBColor[1, 0.5, 0]], 
+        StyleBox[
+         SubsuperscriptBox["Z", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["N", "L", "B"], "+", 
+            SubsuperscriptBox["N", "R", "B"]}], ",", " ", 
+           SubsuperscriptBox["\[Beta]", "max", "B"]}], "B"],
+         FontColor->RGBColor[1, 0.5, 0]]}
+      }], ")"}], 
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["D", "1", "A"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "A"]]},
+       {
+        SubsuperscriptBox["D", "1", "B"]},
+       {"\[VerticalEllipsis]"},
+       {
+        SubscriptBox["D", 
+         SubsuperscriptBox["\[Beta]", "max", "B"]]}
+      }], ")"}]}]}], TraditionalForm]], "EquationNumbered",
+ CellChangeTimes->{{3.763913741973172*^9, 3.763913936019421*^9}, {
+   3.763913989695944*^9, 3.7639139940073547`*^9}, {3.7639141986137*^9, 
+   3.7639142126588287`*^9}, {3.763914253938325*^9, 3.7639143387196913`*^9}, 
+   3.763914412661495*^9, 3.7639144734180307`*^9, {3.763914525103057*^9, 
+   3.763914545578945*^9}, {3.763914599843725*^9, 3.763914600742784*^9}, {
+   3.7639146349558363`*^9, 3.7639147884384403`*^9}, {3.763982361555876*^9, 
+   3.763982385206746*^9}, {3.764601422968302*^9, 3.7646014728393183`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Asymptotic functions", "Subsection",
+ CellChangeTimes->{{3.7640794454556704`*^9, 3.764079448419134*^9}}],
+
+Cell["The hyperspherical bessel functions from the Avery book are:", "Text",
+ CellChangeTimes->{{3.764079456641349*^9, 3.764079473242763*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"HypBesselJ", "[", 
+   RowBox[{"\[Lambda]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   FractionBox[
+    RowBox[{"BesselJ", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}], "\n", 
+ RowBox[{
+  RowBox[{"HypBesselY", "[", 
+   RowBox[{"\[Lambda]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   FractionBox[
+    RowBox[{"BesselY", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}], "\n", 
+ RowBox[{
+  RowBox[{"HypBesselI", "[", 
+   RowBox[{"\[Lambda]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   FractionBox[
+    RowBox[{"BesselI", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}], "\n", 
+ RowBox[{
+  RowBox[{"HypBesselK", "[", 
+   RowBox[{"\[Lambda]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   FractionBox[
+    RowBox[{"BesselK", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}]}], "Input",
+ CellChangeTimes->{3.764079439880618*^9}],
+
+Cell["We use the reduced functions", "Text",
+ CellChangeTimes->{{3.7640794788386106`*^9, 3.764079493578141*^9}, {
+  3.764079563247161*^9, 3.764079565359043*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"RHypBesselJ", "[", 
+   RowBox[{"\[Lambda]_", ",", "\[Alpha]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   SuperscriptBox["x", "\[Alpha]"], 
+   FractionBox[
+    RowBox[{"BesselJ", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}], "\n", 
+ RowBox[{
+  RowBox[{"RHypBesselY", "[", 
+   RowBox[{"\[Lambda]_", ",", "\[Alpha]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   SuperscriptBox["x", "\[Alpha]"], 
+   FractionBox[
+    RowBox[{"BesselY", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}], "\n", 
+ RowBox[{
+  RowBox[{"RHypBesselI", "[", 
+   RowBox[{"\[Lambda]_", ",", "\[Alpha]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   SuperscriptBox["x", "\[Alpha]"], 
+   FractionBox[
+    RowBox[{"BesselI", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}], "\n", 
+ RowBox[{
+  RowBox[{"RHypBesselK", "[", 
+   RowBox[{"\[Lambda]_", ",", "\[Alpha]_", ",", "d_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1"}], "]"}], 
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "2"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "4"}], ")"}], "!!"}]], 
+   SuperscriptBox["x", "\[Alpha]"], 
+   FractionBox[
+    RowBox[{"BesselK", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"d", "/", "2"}], "-", "1", "+", "\[Lambda]"}], ",", "x"}], 
+     "]"}], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"d", "/", "2"}], "-", "1"}]]]}]}]}], "Input",
+ CellChangeTimes->{{3.76407950085468*^9, 3.7640795417876577`*^9}}],
+
+Cell[TextData[{
+ "with the usual choice that either ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (so the reduced functions are equal to the original functions) or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "-", "1"}], ")"}], "/", "2"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which turns all of these into Riccatti functions."
+}], "Text",
+ CellChangeTimes->{{3.7640795470954733`*^9, 3.764079611853475*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ktest", "=", 
+  SqrtBox[
+   RowBox[{"2", " ", "2.5"}]]}]], "Input",
+ CellChangeTimes->{{3.764079366407731*^9, 3.764079383887475*^9}}],
+
+Cell[BoxData["2.23606797749979`"], "Output",
+ CellChangeTimes->{3.764079389890765*^9, 3.7640796595965977`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"Log", "[", 
+     RowBox[{"RHypBesselJ", "[", 
+      RowBox[{"\[Lambda]", ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"d", "-", "1"}], ")"}], "/", "2"}], ",", "d", ",", 
+       RowBox[{"k", " ", "r"}]}], "]"}], "]"}], ",", "r"}], "]"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"k", "\[Rule]", "ktest"}], ",", 
+    RowBox[{"r", "\[Rule]", "5"}], ",", 
+    RowBox[{"d", "\[Rule]", "3"}], ",", 
+    RowBox[{"\[Lambda]", "\[Rule]", "0"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.7640796622951803`*^9, 3.7640797583960667`*^9}, 
+   3.7640883762695923`*^9, {3.764350191995184*^9, 3.764350192200521*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "0.417914938907545`", " "}]], "Input",
+ CellChangeTimes->{{3.764350195086356*^9, 3.764350195115142*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "2.3928314278835314`", " "}]], "Input",
+ CellChangeTimes->{{3.764325441592208*^9, 3.76432544160353*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "/", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{"RHypBesselJ", "[", 
+       RowBox[{"\[Lambda]", ",", "\[Alpha]", ",", "d", ",", 
+        RowBox[{"k", " ", "r"}]}], "]"}], "]"}], ",", "r"}], "]"}]}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"k", "\[Rule]", "ktest"}], ",", 
+    RowBox[{"r", "\[Rule]", "5"}], ",", 
+    RowBox[{"d", "\[Rule]", "3"}], ",", 
+    RowBox[{"\[Lambda]", "\[Rule]", "0"}], ",", 
+    RowBox[{"\[Alpha]", "\[Rule]", "0"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.764088251893897*^9, 3.764088256548203*^9}, {
+  3.764088359081172*^9, 3.764088418623967*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "1.6183457253323084`"}]], "Output",
+ CellChangeTimes->{
+  3.7640882613001223`*^9, {3.764088378938157*^9, 3.764088419519792*^9}, 
+   3.7641103206929693`*^9, 3.7643253307278013`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"RHypBesselJ", "[", 
+     RowBox[{"\[Lambda]", ",", "\[Alpha]", ",", "d", ",", 
+      RowBox[{"k", " ", "r"}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"d", "\[Rule]", "3"}], ",", 
+      RowBox[{"\[Lambda]", "\[Rule]", "0"}], ",", 
+      RowBox[{"\[Alpha]", "\[Rule]", "0"}]}], "}"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.764088752527001*^9, 3.764088803554255*^9}, {
+  3.764110234775049*^9, 3.7641102591288013`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["k", "2"], " ", 
+     SuperscriptBox["r", "2"]}], "6"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "r", "]"}], "3"],
+    SeriesData[$CellContext`r, 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`r, 0, {1, 0, Rational[-1, 6] $CellContext`k^2}, 0, 
+   3, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.764088761658437*^9, 3.7640888040096483`*^9}, {
+  3.764110242127153*^9, 3.76411026414985*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Simplify", "[", 
+    RowBox[{"RHypBesselJ", "[", 
+     RowBox[{"\[Lambda]", ",", "\[Alpha]", ",", "d", ",", 
+      RowBox[{"k", " ", "r"}]}], "]"}], "]"}], "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"d", "-", "1"}], ")"}], "/", "2"}]}], ",", 
+     RowBox[{"d", "\[Rule]", "3"}]}], "}"}]}], "/.", 
+  RowBox[{"d", "\[Rule]", "3"}]}]], "Input",
+ CellChangeTimes->{{3.764432758783942*^9, 3.7644328130162497`*^9}, {
+   3.764432875645268*^9, 3.7644328767076073`*^9}, 3.764433233866714*^9, {
+   3.764433275790579*^9, 3.764433276349427*^9}, {3.7644341923602123`*^9, 
+   3.764434207765236*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox[
+   FractionBox["\[Pi]", "2"]], " ", 
+  SqrtBox[
+   RowBox[{"k", " ", "r"}]], " ", 
+  RowBox[{"BesselJ", "[", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "+", "\[Lambda]"}], ",", 
+    RowBox[{"k", " ", "r"}]}], "]"}]}]], "Output",
+ CellChangeTimes->{{3.7644327924526863`*^9, 3.7644328169524393`*^9}, 
+   3.764432877037875*^9, 3.764433234275782*^9, 3.764433276740142*^9, {
+   3.764434204190523*^9, 3.764434208276482*^9}}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -7370,148 +9057,198 @@ Cell[22837, 711, 1913, 53, 85, "EquationNumbered"],
 Cell[24753, 766, 1540, 44, 66, "EquationNumbered"],
 Cell[26296, 812, 1412, 40, 62, "EquationNumbered"],
 Cell[27711, 854, 471, 11, 31, "Text"],
-Cell[28185, 867, 716, 22, 63, "EquationNumbered"],
-Cell[28904, 891, 181, 4, 31, "Text"],
-Cell[29088, 897, 1423, 39, 65, "EquationNumbered"],
-Cell[30514, 938, 2050, 68, 48, "Text"],
-Cell[32567, 1008, 1619, 48, 66, "EquationNumbered"],
-Cell[34189, 1058, 709, 23, 48, "Text"],
-Cell[34901, 1083, 1277, 38, 65, "EquationNumbered"],
-Cell[36181, 1123, 2055, 59, 65, "EquationNumbered"],
-Cell[38239, 1184, 162, 3, 31, "Text"],
-Cell[38404, 1189, 1531, 42, 65, "EquationNumbered"],
-Cell[39938, 1233, 1513, 42, 65, "EquationNumbered"],
-Cell[41454, 1277, 92, 1, 31, "Text"],
-Cell[41549, 1280, 2684, 76, 111, "EquationNumbered"],
-Cell[44236, 1358, 2701, 77, 111, "EquationNumbered"],
-Cell[46940, 1437, 381, 9, 34, "Text"],
-Cell[47324, 1448, 3454, 96, 113, "EquationNumbered"],
-Cell[50781, 1546, 1909, 58, 48, "Text"],
-Cell[52693, 1606, 3086, 86, 114, "EquationNumbered"],
-Cell[55782, 1694, 2513, 71, 67, "EquationNumbered"],
-Cell[58298, 1767, 187, 4, 31, "Text"],
-Cell[58488, 1773, 2551, 71, 67, "EquationNumbered"],
-Cell[61042, 1846, 114, 1, 31, "Text"],
-Cell[61159, 1849, 711, 22, 67, "EquationNumbered"],
-Cell[61873, 1873, 419, 14, 66, "EquationNumbered"],
-Cell[62295, 1889, 268, 7, 40, "EquationNumbered"],
-Cell[62566, 1898, 407, 12, 40, "EquationNumbered"],
-Cell[62976, 1912, 1183, 38, 43, "Text"],
+Cell[28185, 867, 1067, 33, 63, "EquationNumbered"],
+Cell[29255, 902, 181, 4, 31, "Text"],
+Cell[29439, 908, 1423, 39, 65, "EquationNumbered"],
+Cell[30865, 949, 2050, 68, 48, "Text"],
+Cell[32918, 1019, 2043, 60, 66, "EquationNumbered"],
+Cell[34964, 1081, 941, 29, 48, "Text"],
+Cell[35908, 1112, 1504, 44, 65, "EquationNumbered"],
+Cell[37415, 1158, 2470, 71, 65, "EquationNumbered"],
+Cell[39888, 1231, 162, 3, 31, "Text"],
+Cell[40053, 1236, 1531, 42, 65, "EquationNumbered"],
+Cell[41587, 1280, 1513, 42, 65, "EquationNumbered"],
+Cell[43103, 1324, 92, 1, 31, "Text"],
+Cell[43198, 1327, 2943, 85, 111, "EquationNumbered"],
+Cell[46144, 1414, 3166, 88, 111, "EquationNumbered"],
+Cell[49313, 1504, 3165, 89, 111, "EquationNumbered"],
+Cell[52481, 1595, 381, 9, 34, "Text"],
+Cell[52865, 1606, 3602, 98, 113, "EquationNumbered"],
+Cell[56470, 1706, 1909, 58, 48, "Text"],
+Cell[58382, 1766, 3134, 86, 114, "EquationNumbered"],
+Cell[61519, 1854, 2563, 72, 67, "EquationNumbered"],
+Cell[64085, 1928, 187, 4, 31, "Text"],
+Cell[64275, 1934, 2551, 71, 67, "EquationNumbered"],
+Cell[66829, 2007, 114, 1, 31, "Text"],
+Cell[66946, 2010, 711, 22, 67, "EquationNumbered"],
+Cell[67660, 2034, 419, 14, 66, "EquationNumbered"],
+Cell[68082, 2050, 268, 7, 40, "EquationNumbered"],
+Cell[68353, 2059, 456, 13, 40, "EquationNumbered"],
+Cell[68812, 2074, 1183, 38, 43, "Text"],
 Cell[CellGroupData[{
-Cell[64184, 1954, 123, 1, 46, "Subsection"],
-Cell[64310, 1957, 933, 27, 31, "Text"],
-Cell[65246, 1986, 2750, 77, 116, "EquationNumbered"],
-Cell[67999, 2065, 3305, 90, 116, "EquationNumbered"],
-Cell[71307, 2157, 3118, 87, 115, "EquationNumbered"],
-Cell[74428, 2246, 88, 1, 31, "Text"],
-Cell[74519, 2249, 812, 28, 71, "EquationNumbered"],
-Cell[75334, 2279, 97, 1, 31, "Text"],
-Cell[75434, 2282, 3739, 103, 122, "EquationNumbered"],
-Cell[79176, 2387, 3556, 99, 122, "EquationNumbered"],
-Cell[82735, 2488, 100, 1, 31, "Text"],
+Cell[70020, 2116, 123, 1, 46, "Subsection"],
+Cell[70146, 2119, 933, 27, 31, "Text"],
+Cell[71082, 2148, 2800, 78, 116, "EquationNumbered"],
+Cell[73885, 2228, 3351, 90, 116, "EquationNumbered"],
+Cell[77239, 2320, 3167, 88, 115, "EquationNumbered"],
+Cell[80409, 2410, 88, 1, 31, "Text"],
+Cell[80500, 2413, 812, 28, 71, "EquationNumbered"],
+Cell[81315, 2443, 97, 1, 31, "Text"],
+Cell[81415, 2446, 3787, 104, 122, "EquationNumbered"],
+Cell[85205, 2552, 3605, 100, 122, "EquationNumbered"],
+Cell[88813, 2654, 100, 1, 31, "Text"],
 Cell[CellGroupData[{
-Cell[82860, 2493, 621, 20, 71, "Input"],
-Cell[83484, 2515, 954, 29, 65, "Output"]
+Cell[88938, 2659, 621, 20, 71, "Input"],
+Cell[89562, 2681, 954, 29, 65, "Output"]
 }, Open  ]],
-Cell[84453, 2547, 4475, 120, 182, "EquationNumbered"],
-Cell[88931, 2669, 99, 1, 31, "Text"],
-Cell[89033, 2672, 4251, 115, 129, "EquationNumbered"],
-Cell[93287, 2789, 316, 9, 31, "Text"],
-Cell[93606, 2800, 3301, 89, 122, "EquationNumbered"],
-Cell[96910, 2891, 2610, 75, 49, "Text"],
-Cell[99523, 2968, 540, 14, 35, "Text"],
-Cell[100066, 2984, 1537, 47, 71, "EquationNumbered"],
-Cell[101606, 3033, 696, 19, 66, "EquationNumbered"],
-Cell[102305, 3054, 467, 10, 40, "EquationNumbered"],
-Cell[102775, 3066, 422, 12, 40, "EquationNumbered"],
-Cell[103200, 3080, 218, 4, 31, "Text"],
-Cell[103421, 3086, 6537, 175, 244, "EquationNumbered"],
-Cell[109961, 3263, 4987, 138, 190, "EquationNumbered"],
-Cell[114951, 3403, 5415, 152, 178, "EquationNumbered"],
-Cell[120369, 3557, 381, 12, 43, "Text"],
-Cell[120753, 3571, 3867, 108, 125, "EquationNumbered"],
-Cell[124623, 3681, 125, 1, 31, "Text"],
-Cell[124751, 3684, 3012, 84, 122, "EquationNumbered"],
-Cell[127766, 3770, 4376, 120, 182, "EquationNumbered"],
-Cell[132145, 3892, 174, 4, 31, "Text"],
-Cell[132322, 3898, 5639, 156, 175, "EquationNumbered"],
-Cell[137964, 4056, 252, 5, 31, "Text"],
-Cell[138219, 4063, 3315, 91, 122, "EquationNumbered"],
-Cell[141537, 4156, 3032, 82, 122, "EquationNumbered"],
-Cell[144572, 4240, 659, 17, 67, "Text"]
+Cell[90531, 2713, 4524, 121, 182, "EquationNumbered"],
+Cell[95058, 2836, 99, 1, 31, "Text"],
+Cell[95160, 2839, 4300, 116, 129, "EquationNumbered"],
+Cell[99463, 2957, 316, 9, 31, "Text"],
+Cell[99782, 2968, 3348, 89, 122, "EquationNumbered"],
+Cell[103133, 3059, 2659, 76, 49, "Text"],
+Cell[105795, 3137, 540, 14, 35, "Text"],
+Cell[106338, 3153, 1537, 47, 71, "EquationNumbered"],
+Cell[107878, 3202, 696, 19, 66, "EquationNumbered"],
+Cell[108577, 3223, 467, 10, 40, "EquationNumbered"],
+Cell[109047, 3235, 470, 13, 40, "EquationNumbered"],
+Cell[109520, 3250, 218, 4, 31, "Text"],
+Cell[109741, 3256, 6537, 175, 244, "EquationNumbered"],
+Cell[116281, 3433, 4987, 138, 190, "EquationNumbered"],
+Cell[121271, 3573, 5415, 152, 178, "EquationNumbered"],
+Cell[126689, 3727, 381, 12, 43, "Text"],
+Cell[127073, 3741, 3867, 108, 125, "EquationNumbered"],
+Cell[130943, 3851, 125, 1, 31, "Text"],
+Cell[131071, 3854, 3065, 85, 122, "EquationNumbered"],
+Cell[134139, 3941, 4425, 121, 182, "EquationNumbered"],
+Cell[138567, 4064, 174, 4, 31, "Text"],
+Cell[138744, 4070, 5689, 157, 175, "EquationNumbered"],
+Cell[144436, 4229, 252, 5, 31, "Text"],
+Cell[144691, 4236, 3367, 92, 122, "EquationNumbered"],
+Cell[148061, 4330, 3082, 83, 122, "EquationNumbered"],
+Cell[151146, 4415, 659, 17, 67, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[145280, 4263, 296, 6, 71, "Section"],
-Cell[145579, 4271, 138, 1, 31, "Text"],
-Cell[145720, 4274, 441, 13, 63, "EquationNumbered"],
-Cell[146164, 4289, 86, 1, 31, "Text"],
-Cell[146253, 4292, 526, 16, 63, "EquationNumbered"],
-Cell[146782, 4310, 120, 1, 31, "Text"],
-Cell[146905, 4313, 4925, 136, 151, "EquationNumbered"],
-Cell[151833, 4451, 114, 1, 31, "Text"],
-Cell[151950, 4454, 3867, 112, 143, "EquationNumbered"],
-Cell[155820, 4568, 89, 1, 31, "Text"],
-Cell[155912, 4571, 942, 27, 71, "EquationNumbered"],
-Cell[156857, 4600, 388, 13, 51, "Text"],
-Cell[157248, 4615, 404, 13, 40, "EquationNumbered"],
-Cell[157655, 4630, 89, 1, 31, "Text"],
-Cell[157747, 4633, 983, 29, 60, "EquationNumbered"],
-Cell[158733, 4664, 1761, 51, 77, "EquationNumbered"],
-Cell[160497, 4717, 487, 12, 31, "Text"],
-Cell[160987, 4731, 968, 28, 71, "EquationNumbered"],
-Cell[161958, 4761, 84, 1, 31, "Text"]
+Cell[151854, 4438, 296, 6, 71, "Section"],
+Cell[152153, 4446, 138, 1, 31, "Text"],
+Cell[152294, 4449, 441, 13, 63, "EquationNumbered"],
+Cell[152738, 4464, 86, 1, 31, "Text"],
+Cell[152827, 4467, 526, 16, 63, "EquationNumbered"],
+Cell[153356, 4485, 120, 1, 31, "Text"],
+Cell[153479, 4488, 4976, 137, 151, "EquationNumbered"],
+Cell[158458, 4627, 114, 1, 31, "Text"],
+Cell[158575, 4630, 3916, 113, 143, "EquationNumbered"],
+Cell[162494, 4745, 89, 1, 31, "Text"],
+Cell[162586, 4748, 942, 27, 71, "EquationNumbered"],
+Cell[163531, 4777, 388, 13, 51, "Text"],
+Cell[163922, 4792, 404, 13, 40, "EquationNumbered"],
+Cell[164329, 4807, 89, 1, 31, "Text"],
+Cell[164421, 4810, 1032, 30, 60, "EquationNumbered"],
+Cell[165456, 4842, 1761, 51, 77, "EquationNumbered"],
+Cell[167220, 4895, 487, 12, 31, "Text"],
+Cell[167710, 4909, 968, 28, 71, "EquationNumbered"],
+Cell[168681, 4939, 84, 1, 31, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[162079, 4767, 350, 7, 71, "Section"],
-Cell[162432, 4776, 129, 1, 31, "Text"],
-Cell[162564, 4779, 517, 15, 63, "EquationNumbered"],
-Cell[163084, 4796, 76, 1, 31, "Text"],
-Cell[163163, 4799, 404, 14, 63, "EquationNumbered"],
-Cell[163570, 4815, 355, 10, 31, "Text"],
-Cell[163928, 4827, 728, 22, 71, "EquationNumbered"],
-Cell[164659, 4851, 156, 2, 31, "Text"],
-Cell[164818, 4855, 2884, 80, 122, "EquationNumbered"],
-Cell[167705, 4937, 91, 1, 31, "Text"],
-Cell[167799, 4940, 5075, 139, 152, "EquationNumbered"],
-Cell[172877, 5081, 127, 1, 31, "Text"],
-Cell[173007, 5084, 5233, 147, 209, "EquationNumbered"],
-Cell[178243, 5233, 1022, 32, 45, "Text"],
-Cell[179268, 5267, 6682, 181, 216, "EquationNumbered"],
-Cell[185953, 5450, 5495, 156, 209, "EquationNumbered"],
-Cell[191451, 5608, 348, 12, 35, "Text"],
-Cell[191802, 5622, 5526, 156, 209, "EquationNumbered"],
-Cell[197331, 5780, 5575, 158, 209, "EquationNumbered"],
-Cell[202909, 5940, 351, 10, 34, "Text"],
-Cell[203263, 5952, 444, 15, 40, "EquationNumbered"],
-Cell[203710, 5969, 86, 1, 31, "Text"],
-Cell[203799, 5972, 981, 29, 60, "EquationNumbered"],
-Cell[204783, 6003, 3966, 114, 143, "EquationNumbered"],
-Cell[208752, 6119, 219, 4, 31, "Text"],
-Cell[208974, 6125, 3931, 115, 143, "EquationNumbered"],
-Cell[212908, 6242, 5029, 144, 205, "EquationNumbered"],
-Cell[217940, 6388, 5489, 156, 205, "EquationNumbered"],
-Cell[223432, 6546, 5260, 150, 194, "EquationNumbered"],
-Cell[228695, 6698, 134, 1, 31, "Text"],
-Cell[228832, 6701, 184, 4, 31, "Text"],
-Cell[229019, 6707, 4142, 121, 143, "EquationNumbered"],
-Cell[233164, 6830, 3322, 95, 105, "EquationNumbered"],
+Cell[168802, 4945, 350, 7, 71, "Section"],
+Cell[169155, 4954, 129, 1, 31, "Text"],
+Cell[169287, 4957, 517, 15, 63, "EquationNumbered"],
+Cell[169807, 4974, 76, 1, 31, "Text"],
+Cell[169886, 4977, 404, 14, 63, "EquationNumbered"],
+Cell[170293, 4993, 355, 10, 31, "Text"],
+Cell[170651, 5005, 728, 22, 71, "EquationNumbered"],
+Cell[171382, 5029, 156, 2, 31, "Text"],
+Cell[171541, 5033, 2933, 81, 122, "EquationNumbered"],
+Cell[174477, 5116, 91, 1, 31, "Text"],
+Cell[174571, 5119, 5125, 140, 152, "EquationNumbered"],
+Cell[179699, 5261, 127, 1, 31, "Text"],
+Cell[179829, 5264, 5282, 148, 209, "EquationNumbered"],
+Cell[185114, 5414, 1022, 32, 45, "Text"],
+Cell[186139, 5448, 6734, 182, 216, "EquationNumbered"],
+Cell[192876, 5632, 5543, 156, 209, "EquationNumbered"],
+Cell[198422, 5790, 348, 12, 35, "Text"],
+Cell[198773, 5804, 5574, 156, 209, "EquationNumbered"],
+Cell[204350, 5962, 5621, 158, 209, "EquationNumbered"],
+Cell[209974, 6122, 351, 10, 34, "Text"],
+Cell[210328, 6134, 444, 15, 40, "EquationNumbered"],
+Cell[210775, 6151, 86, 1, 31, "Text"],
+Cell[210864, 6154, 1032, 30, 60, "EquationNumbered"],
+Cell[211899, 6186, 3966, 114, 143, "EquationNumbered"],
+Cell[215868, 6302, 219, 4, 31, "Text"],
+Cell[216090, 6308, 3931, 115, 143, "EquationNumbered"],
+Cell[220024, 6425, 5029, 144, 205, "EquationNumbered"],
+Cell[225056, 6571, 5489, 156, 205, "EquationNumbered"],
+Cell[230548, 6729, 5260, 150, 194, "EquationNumbered"],
+Cell[235811, 6881, 134, 1, 31, "Text"],
+Cell[235948, 6884, 184, 4, 31, "Text"],
+Cell[236135, 6890, 4142, 121, 143, "EquationNumbered"],
+Cell[240280, 7013, 3322, 95, 105, "EquationNumbered"],
 Cell[CellGroupData[{
-Cell[236511, 6929, 164, 2, 35, "Subsubsection"],
-Cell[236678, 6933, 823, 24, 63, "EquationNumbered"],
-Cell[237504, 6959, 76, 1, 31, "Text"],
-Cell[237583, 6962, 404, 14, 63, "EquationNumbered"],
-Cell[237990, 6978, 1385, 42, 63, "EquationNumbered"],
-Cell[239378, 7022, 275, 9, 31, "Text"],
-Cell[239656, 7033, 875, 27, 48, "EquationNumbered"],
-Cell[240534, 7062, 647, 19, 35, "Text"],
-Cell[241184, 7083, 1425, 35, 71, "EquationNumbered"],
-Cell[242612, 7120, 90, 1, 31, "Text"],
-Cell[242705, 7123, 1198, 32, 70, "EquationNumbered"],
-Cell[243906, 7157, 137, 1, 31, "Text"],
-Cell[244046, 7160, 1665, 44, 82, "EquationNumbered"],
-Cell[245714, 7206, 1687, 48, 39, "Text"],
-Cell[247404, 7256, 1949, 54, 62, "EquationNumbered"]
+Cell[243627, 7112, 164, 2, 35, "Subsubsection"],
+Cell[243794, 7116, 823, 24, 63, "EquationNumbered"],
+Cell[244620, 7142, 76, 1, 31, "Text"],
+Cell[244699, 7145, 404, 14, 63, "EquationNumbered"],
+Cell[245106, 7161, 1385, 42, 63, "EquationNumbered"],
+Cell[246494, 7205, 275, 9, 31, "Text"],
+Cell[246772, 7216, 875, 27, 48, "EquationNumbered"],
+Cell[247650, 7245, 647, 19, 35, "Text"],
+Cell[248300, 7266, 1425, 35, 71, "EquationNumbered"],
+Cell[249728, 7303, 90, 1, 31, "Text"],
+Cell[249821, 7306, 1198, 32, 70, "EquationNumbered"],
+Cell[251022, 7340, 137, 1, 31, "Text"],
+Cell[251162, 7343, 1665, 44, 82, "EquationNumbered"],
+Cell[252830, 7389, 1507, 40, 82, "EquationNumbered"],
+Cell[254340, 7431, 1843, 54, 39, "Text"],
+Cell[256186, 7487, 338, 10, 31, "Text"],
+Cell[256527, 7499, 2277, 60, 62, "EquationNumbered"],
+Cell[258807, 7561, 90, 1, 31, "Text"],
+Cell[258900, 7564, 1731, 44, 82, "EquationNumbered"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[260668, 7613, 100, 1, 46, "Subsection"],
+Cell[260771, 7616, 1154, 28, 85, "Text"],
+Cell[261928, 7646, 939, 28, 89, "EquationNumbered"],
+Cell[262870, 7676, 1098, 31, 89, "EquationNumbered"],
+Cell[263971, 7709, 1113, 32, 59, "Text"],
+Cell[265087, 7743, 1060, 34, 89, "EquationNumbered"],
+Cell[266150, 7779, 808, 24, 35, "Text"],
+Cell[266961, 7805, 2883, 90, 118, "EquationNumbered"],
+Cell[269847, 7897, 827, 26, 35, "Text"],
+Cell[270677, 7925, 3978, 115, 118, "EquationNumbered"],
+Cell[274658, 8042, 246, 8, 35, "Text"],
+Cell[274907, 8052, 4151, 121, 118, "EquationNumbered"],
+Cell[279061, 8175, 554, 18, 35, "Text"],
+Cell[279618, 8195, 677, 21, 89, "EquationNumbered"],
+Cell[280298, 8218, 158, 3, 31, "Text"],
+Cell[280459, 8223, 13970, 397, 318, "EquationNumbered"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[294466, 8625, 110, 1, 46, "Subsection"],
+Cell[294579, 8628, 142, 1, 31, "Text"],
+Cell[294724, 8631, 2716, 97, 272, "Input"],
+Cell[297443, 8730, 161, 2, 31, "Text"],
+Cell[297607, 8734, 2965, 101, 272, "Input"],
+Cell[300575, 8837, 566, 16, 31, "Text"],
+Cell[CellGroupData[{
+Cell[301166, 8857, 157, 4, 49, "Input"],
+Cell[301326, 8863, 110, 1, 46, "Output"]
+}, Open  ]],
+Cell[301451, 8867, 692, 18, 46, "Input"],
+Cell[302146, 8887, 132, 2, 46, InheritFromParent],
+Cell[302281, 8891, 132, 2, 46, InheritFromParent],
+Cell[CellGroupData[{
+Cell[302438, 8897, 660, 17, 46, "Input"],
+Cell[303101, 8916, 208, 4, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[303346, 8925, 586, 15, 46, "Input"],
+Cell[303935, 8942, 555, 16, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[304527, 8963, 715, 18, 46, "Input"],
+Cell[305245, 8983, 464, 13, 112, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
